@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_skeleton/core/init/analytics/analytic_manager.dart';
 
 import 'core/init/cache/shared_pref_manager.dart';
 import 'core/init/navigation/navigation_manager.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: NavigationRoute.instance.generateRoute,
       navigatorKey: NavigationManager.instance.navigatorKey,
+      navigatorObservers: [AnalytcisManager.instance.observer],
       title: 'Material App',
       home:  OnBoardView(),
     );
