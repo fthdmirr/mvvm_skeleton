@@ -1,9 +1,11 @@
 
+
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 
 class AnalytcisManager{
-  static AnalytcisManager _instance = AnalytcisManager._init();
+  static final AnalytcisManager _instance = AnalytcisManager._init();
   static AnalytcisManager get instance => _instance;
   AnalytcisManager._init();
 
